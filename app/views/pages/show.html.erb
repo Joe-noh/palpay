@@ -1,0 +1,10 @@
+<%= form_tag('/payment') do %>
+  <ul>
+    <li>マシュマロ 300円</li>
+
+    <%= hidden_field_tag 'name[]', 'マシュマロ' %>
+    <%= hidden_field_tag 'price[]', 300 %>
+  </ul>
+
+  <%= submit_tag '買う' %>
+<% end %>
