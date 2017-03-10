@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get '/' => 'pages#show'
+
+  get  '/payment' => 'paypals#show'
+  post '/payment' => 'paypals#create'
+  post '/payment/execute' => 'paypals#execute'
 end
