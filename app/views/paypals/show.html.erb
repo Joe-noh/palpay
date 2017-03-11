@@ -1,0 +1,10 @@
+<pre><code>
+<%= @get_express_checkout_details_response.to_yaml %>
+</code></pre>
+
+<%= form_tag('/payment/execute') do %>
+  <%= hidden_field_tag 'token', @token %>
+  <%= hidden_field_tag 'payer_id', @payer_id %>
+
+  <%= submit_tag '確定' %>
+<% end %>
